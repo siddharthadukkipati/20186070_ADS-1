@@ -1,6 +1,5 @@
 /**
  * percolation theory.
- * @author Swapnika Vakacharla.
  */
 import java.util.Scanner;
 /**

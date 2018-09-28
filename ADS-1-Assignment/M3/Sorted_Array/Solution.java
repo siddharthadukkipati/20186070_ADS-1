@@ -1,9 +1,9 @@
 import java.util.Scanner;
 import java.util.Arrays;
-class sortedArray {
+class SortedArray {
     private int[] firstArray;
     private int[] secondArray;
-    sortedArray(final int[] a1, final int[] a2) {
+    SortedArray(final int[] a1, final int[] a2) {
         this.firstArray = a1;
         this.secondArray = a2;
     }
@@ -47,6 +47,9 @@ class Solution {
         for (int j = 0; j < size2; j++) {
             array2[j] = Integer.parseInt(arraytemp2[j]);
         }
+        SortedArray saobj = new SortedArray(array1, array2);
+        System.out.println(saobj.sortOf(array1, array2));
+
 
 
     }

@@ -63,56 +63,55 @@ class LinkedStackOfStrings {
     }
 }
 /**
-*Soultion class which helps to read the main method based on input. 
+*Soultion class which helps to read the main method based on input.
 */
-public class Solution {
+public final class Solution {
 
-	/**
+    /**
     *checks the paranthesis.
     *returns a boolean value if the paranthesis is followed.
     */
-	private Solution() {
+    private Solution() {
 
-	}
+    }
     /**
     *checks the paranthesis.
     *returns a boolean value if the paranthesis is followed.
     *@param s String type which is the input.
     *@return returns the true if the condition satisfies.
     */
-    public static boolean checkParanthesis(String s) {
+    public static boolean checkParanthesis(final String s) {
         LinkedStackOfStrings obj = new LinkedStackOfStrings();
         int sLength = s.length();
         for (int i = 0; i < sLength; i++) {
             char ch = s.charAt(i);
             if (ch == '(' || ch == '{' || ch == '[') {
                 obj.push(ch);
-            }
-            else {
+            } else {
                 if(obj.isEmpty()) return false;
                 if (ch == ')' && obj.top() == '(') {
                 obj.pop();
-                }
-                else if (ch == '}' && obj.top() == '{') {
+                } else if (ch == '}' && obj.top() == '{') {
                 obj.pop();
-                }
-                else if (ch == ']' && obj.top() == '[') {
+                } else if (ch == ']' && obj.top() == '[') {
                 obj.pop();
+                } else {
+                    return false;
                 }
-                else return false;
             }
         }
     return obj.isEmpty();
     }
     /**
     *main method which stores the main method.
+    *@param args String data type.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int size = Integer.parseInt(sc.nextLine());
         for (int i = 0; i < size; i++) {
             String line = sc.next();
-            if(checkParanthesis(line)){
+            if (checkParanthesis(line)) {
                 System.out.println("YES");
             } else {
                 System.out.println("NO");

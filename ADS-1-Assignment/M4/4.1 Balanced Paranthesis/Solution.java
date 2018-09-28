@@ -88,7 +88,9 @@ public final class Solution {
             if (ch == '(' || ch == '{' || ch == '[') {
                 obj.push(ch);
             } else {
-                if(obj.isEmpty()) return false;
+                if (obj.isEmpty()) {
+                    return false;
+                }
                 if (ch == ')' && obj.top() == '(') {
                 obj.pop();
                 } else if (ch == '}' && obj.top() == '{') {

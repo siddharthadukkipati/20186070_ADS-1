@@ -66,6 +66,14 @@ class LinkedStackOfStrings {
 *Soultion class which helps to read the main method based on input. 
 */
 public class Solution {
+
+	/**
+    *checks the paranthesis.
+    *returns a boolean value if the paranthesis is followed.
+    */
+	private Solution() {
+
+	}
     /**
     *checks the paranthesis.
     *returns a boolean value if the paranthesis is followed.

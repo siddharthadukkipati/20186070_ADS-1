@@ -30,7 +30,7 @@ class LinkedList {
 	public boolean isEmpty() {
 		return first == null;
 	}
-	public String print() {
+	public String toString() {
 		Node head = first;
 		String storage = "";
 		while(head != null) {
@@ -54,7 +54,7 @@ class AddLargeNumbers {
     }
 
     public static String digitsToNumber(final LinkedList list) {
-    	return list.print();
+    	return list.toString();
     }
 
     // public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {

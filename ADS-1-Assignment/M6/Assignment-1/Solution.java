@@ -8,6 +8,9 @@ class LinkedList {
     */
     LinkedList() {
     }
+    /**
+    *Creating a Node and assigning value to it.
+    */
     Node first = null;
     /**
     *Class Node.
@@ -19,9 +22,13 @@ class LinkedList {
         Node() {
         }
         int item;
+        /**
+        *Creating a node.
+        */
         Node next;
         /**
         *Over ridden constructor.
+        *@param inputItem input item.
         */
         Node(int inputItem) {
             this.item = inputItem;
@@ -36,6 +43,7 @@ class LinkedList {
     }
     /**
     *pushes the element or item into the stack.
+    *@param item input.
     */
     public void push(int item) {
         Node nextAddress = new Node(item);
@@ -83,7 +91,7 @@ class AddLargeNumbers {
     */  
     public static LinkedList numberToDigits(final String number) {
         LinkedList numberToDigits = new LinkedList();
-        for(int i = number.length()-1; i >= 0; i--) {
+        for(int i = number.length() - 1; i >= 0; i--) {
             String digitConverstion = "" + number.charAt(i);
             numberToDigits.push(Integer.parseInt(digitConverstion));
         }
@@ -100,7 +108,8 @@ class AddLargeNumbers {
     /**
     *This method should help the adding both the lists.
     */
-    // public static LinkedList addLargeNumbers(final LinkedList list1, final LinkedList list2) {
+    // public static LinkedList addLargeNumbers(final LinkedList list1,
+    //     final LinkedList list2) {
 
     // }
 }

@@ -46,7 +46,7 @@ class AddLargeNumbers {
     
     public static LinkedList numberToDigits(final String number) {
     	LinkedList numberToDigits = new LinkedList();
-    	for(int i = number.length(); i > 0; i--) {
+    	for(int i = number.length()-1; i > 0; i--) {
     		String elementConverstion = "" + number.charAt(i);
     		numberToDigits.push(Integer.parseInt(elementConverstion));
     	}

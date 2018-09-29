@@ -90,7 +90,7 @@ class AddLargeNumbers {
     /**
     *A deafult constructor.
     */
-    AddLargeNumbers() {
+    private AddLargeNumbers() {
     }
     /**
     *This method reverse's the numbers and Stroe in digits from and retuns.
@@ -124,7 +124,7 @@ class AddLargeNumbers {
 /**
 *This class is used to read the input.
 */
-public class Solution {
+public final class Solution {
     /**
     *A daefult constructor.
     */
@@ -134,7 +134,7 @@ public class Solution {
     *main method is used to read the inut from the test cases.
     @param args arguments.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String p = sc.nextLine();

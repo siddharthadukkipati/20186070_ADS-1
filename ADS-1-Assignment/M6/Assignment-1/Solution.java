@@ -11,7 +11,7 @@ class LinkedList {
     /**
     *Creating a Node and assigning value to it.
     */
-    Node first = null;
+    private Node first = null;
     /**
     *Class Node.
     */
@@ -21,16 +21,19 @@ class LinkedList {
         */
         Node() {
         }
-        int item;
+        /**
+        *Declaring an integer data type.
+        */
+        private int item;
         /**
         *Creating a node.
         */
-        Node next;
+        private Node next;
         /**
         *Over ridden constructor.
         *@param inputItem input item.
         */
-        Node(int inputItem) {
+        Node(final int inputItem) {
             this.item = inputItem;
         }
     }
@@ -45,14 +48,14 @@ class LinkedList {
     *pushes the element or item into the stack.
     *@param item input.
     */
-    public void push(int item) {
+    public void push(final int item) {
         Node nextAddress = new Node(item);
         nextAddress.next = first;
         first = nextAddress;
     }
     /**
     *removes the element.
-    *@return output 
+    *@return output.
     */
     public int pop() {
         int output = first.item;
@@ -73,7 +76,7 @@ class LinkedList {
     public String toString() {
         Node head = first;
         String storage = "";
-        while(head != null) {
+        while (head != null) {
             storage = storage + head.item;
             head = head.next;
         }
@@ -85,13 +88,18 @@ class LinkedList {
 */
 class AddLargeNumbers {
     /**
+    *A deafult constructor.
+    */
+    AddLargeNumbers() {
+    }
+    /**
     *This method reverse's the numbers and Stroe in digits from and retuns.
     *@param number input is given in the form of number.
     *@return numbers in from of digits.
-    */  
+    */
     public static LinkedList numberToDigits(final String number) {
         LinkedList numberToDigits = new LinkedList();
-        for(int i = number.length() - 1; i >= 0; i--) {
+        for (int i = number.length() - 1; i >= 0; i--) {
             String digitConverstion = "" + number.charAt(i);
             numberToDigits.push(Integer.parseInt(digitConverstion));
         }
@@ -118,14 +126,20 @@ class AddLargeNumbers {
 */
 public class Solution {
     /**
+    *A daefult constructor.
+    */
+    private Solution() {
+    }
+    /**
     *main method is used to read the inut from the test cases.
+    @param args arguments.
     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String p = sc.nextLine();
         String q = sc.nextLine();
-        switch(input){
+        switch (input) {
             case "numberToDigits":
                 LinkedList pDigits = AddLargeNumbers.numberToDigits(p);
                 LinkedList qDigits = AddLargeNumbers.numberToDigits(q);
@@ -135,9 +149,12 @@ public class Solution {
             // case "addLargeNumbers":
             //     pDigits = AddLargeNumbers.numberToDigits(p);
             //     qDigits = AddLargeNumbers.numberToDigits(q);
-            //     LinkedList result = AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
+                // LinkedList result =
+                // AddLargeNumbers.addLargeNumbers(pDigits, qDigits);
             //     System.out.println(AddLargeNumbers.digitsToNumber(result));
             //     break;
+            default:
+                    break;
         }
     }
 }

@@ -86,7 +86,7 @@ class LinkedList {
 /**
 *this class adds the large numbers.
 */
-class AddLargeNumbers {
+final class AddLargeNumbers {
     /**
     *A deafult constructor.
     */

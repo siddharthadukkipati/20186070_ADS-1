@@ -4,7 +4,7 @@ class LinkedList {
 	LinkedList() {
 	}
 	Node first = null;
-	class Node {
+	public class Node {
 		Node() {
 		}
 		int item;
@@ -12,6 +12,9 @@ class LinkedList {
 		Node(int inputItem) {
 			this.item = inputItem;
 		}
+	}
+	public int top() {
+		return first.item;
 	}
 	public void push(int item) {
 		Node nextAddress = new Node(item);
@@ -23,7 +26,11 @@ class LinkedList {
 		first = first.next;
 		return output;
 	}
-	String print() {
+
+	public boolean isEmpty() {
+		return first == null;
+	}
+	public String print() {
 		Node head = first;
 		String storage = "";
 		while(head != null) {
@@ -39,7 +46,7 @@ class AddLargeNumbers {
     
     public static LinkedList numberToDigits(final String number) {
     	LinkedList numberToDigits = new LinkedList();
-    	for(int i = 0; i < number.length(); i++) {
+    	for(int i = number.length(); i < 0; i--) {
     		String elementConverstion = "" + number.charAt(i);
     		numberToDigits.push(Integer.parseInt(elementConverstion));
     	}

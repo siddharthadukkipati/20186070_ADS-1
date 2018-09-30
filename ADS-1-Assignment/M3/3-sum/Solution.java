@@ -24,6 +24,7 @@ class ThreeSum {
         long first = 0;
         int next = 0;
         int last = 0;
+        int ten = 10;
         for (int i = 0; i < array.length - 2; i++) {
             first = array[i];
             next = i + 1;

@@ -1,21 +1,42 @@
 import java.util.Scanner;
+/**
+*class deque which is a generic type.
+*/
 class Deque<Item> {
 	Node left = null;
 	Node right = null;
 	int size = 0;
+	/**
+	*Class node.
+	*/
 	class Node {
 		Item data;
 		Node next;
+		/**
+		*constructor.
+		*@param inputdata input data.
+		*/
 		Node(Item inputdata) {
 			this.data = inputdata;
 		}
 	}
+	/**
+	*checks if the queue is empty.
+	*@return true or false.
+	*/
 	boolean isEmpty() {
 		return size == 0;
 	}
+	/**
+	*This method returns the size of the queue.
+	*@return size.
+	*/
 	int size() {
 		return size;
 	}
+	/**
+	*This method pushes the immediate right element in a given queue.
+	*/
 	void pushLeft(Item inputitem) {
 		Node newnode = new Node(inputitem);
 		if(isEmpty()) {
@@ -25,14 +46,14 @@ class Deque<Item> {
 			print();
 			return;
 		}
-		// if (size == 1) {
-		// 	right = left;
-		// }
 		newnode.next = left;
 		left = newnode;
 		size++;
 		print();
 	}
+	/**
+	*This method pushes the immediate right element in a given queue.
+	*/
 	void pushRight(Item inputitem) {
 		if (isEmpty()) {
 			pushLeft(inputitem);
@@ -47,7 +68,10 @@ class Deque<Item> {
 		size++;
 		print();
 	}
-	Item popLeft() {
+	/**
+	*This method removes the immediate left element in a given queue.
+	*/
+	public Item popLeft() {
 		if (isEmpty()) {
 			System.out.println("Deck is empty");
 			return null;
@@ -58,7 +82,10 @@ class Deque<Item> {
 		print();
 		return leftout;
 	}
-	Item popRight() {
+	/**
+	*This method removes the immediate right element in a given queue.
+	*/
+	public Item popRight() {
 		if (isEmpty()) {
 			System.out.println("Deck is empty");
 			return null;
@@ -76,7 +103,10 @@ class Deque<Item> {
 		print();
 		return rightout;
 	}
-    void print() {
+	/**
+	*this method is used to print.
+	*/
+    public void print() {
     	if (isEmpty()) {
     		System.out.println("[]");
     		return;
@@ -93,10 +123,20 @@ class Deque<Item> {
     	System.out.println(str);
     }
 }
+/**
+*This class is to read the input from the testcases.
+*/
 class Solution {
+	/**
+	*deafult constructor.
+	*/
 	Solution() {
 	}
-	public static void main(String[] args) {
+	/**
+	*main method is used to read the input.
+	*@param args passing the arguments.
+	*/
+	public static void main(final String[] args) {
 		Deque<Integer> dequeobj = new Deque<Integer>();
 		Scanner scan = new Scanner(System.in);
 		while (scan.hasNext()) {

@@ -1,0 +1,7 @@
+The given code fragment has 2 while loops which execute the following:
+
+1) The first while loop dequeues the queue and puts them in a stack. As a result the first element in the queue becomes the last element stored in the stack.
+
+2) The second while loop pops out the stack filled in loop 1. Thus, it pops out the values of the queue to queue them back in reverse order.
+
+So, this entire code takes elements from the queue, reverses their order and stores them back in the originally given queue.

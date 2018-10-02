@@ -102,7 +102,7 @@ class SelectionSort {
     *Constructor.
     */
     SelectionSort() {
-    int ten = 10;
+    final int ten = 10;
     this.tournamentArray = new Tournament[ten];
     this.size = 0;
     }
@@ -173,7 +173,7 @@ class SelectionSort {
 /**
 *Soultion.
 */
-public class Solution {
+final public class Solution {
     /**
     *default constructor.
     */

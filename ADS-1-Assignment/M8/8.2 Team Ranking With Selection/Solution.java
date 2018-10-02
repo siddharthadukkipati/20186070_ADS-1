@@ -23,7 +23,7 @@ class Tournament {
 	public int getTeamDraws() {
 		return this.teamDraws;
 	}
-	public int comparedTo(Tournament that) {
+	public int compareTo(Tournament that) {
 		if (this.getTeamWins() > that.getTeamWins()){
 			return 1;
 		} else if (this.getTeamWins() < that.getTeamWins()) {
@@ -79,11 +79,11 @@ class SelectionSort {
 		for (int i = 0; i < size; i++) {
 			int min = i;
 			for (int j = i + 1; j < size; j++) {
-				if (tournamentArray[j].comparedTo(tournamentArray[min]) == 1) {
+				if (tournamentArray[j].compareTo(tournamentArray[min]) == 1) {
 					min = j;
 				}
-				exchange(tournamentArray, i, min);
 			}
+			exchange(tournamentArray, i, min);
 		}
 	}
 	

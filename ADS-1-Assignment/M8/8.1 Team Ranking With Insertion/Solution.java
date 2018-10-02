@@ -80,7 +80,7 @@ public class Solution {
 				Integer.parseInt(tokens[1]),
 				Integer.parseInt(tokens[2]),
 				Integer.parseInt(tokens[3])));
-			System.out.println(sortOf.toString());
 		}
+		System.out.println(sortOf.toString());
 	}
 }	

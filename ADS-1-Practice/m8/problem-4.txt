@@ -1,0 +1,6 @@
+When the given array is in reverse order -
+
+1. Selection sort does N^2/2 compares and N exchanges.
+2. Insertion sort does N^2/2 compares and N^2/2 exchanges.
+
+Therefore, Selection sort runs faster than Insertion sort.

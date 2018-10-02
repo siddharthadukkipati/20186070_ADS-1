@@ -1,0 +1,6 @@
+When all the keys are identical in a given array, neither of the algorithms do exchanges. However, when it comes to comparisons -
+
+1. Selection sort does N^2 comparisons
+2. Insertion sort does N comparisons
+
+Therefore, Insertion sort runs faster than Selection sort.

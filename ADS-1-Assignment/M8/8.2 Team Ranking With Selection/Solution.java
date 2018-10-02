@@ -173,7 +173,7 @@ class SelectionSort {
 /**
 *Soultion.
 */
-final public class Solution {
+public final class Solution {
     /**
     *default constructor.
     */

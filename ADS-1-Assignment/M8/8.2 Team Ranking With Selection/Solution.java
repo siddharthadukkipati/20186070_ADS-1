@@ -24,18 +24,21 @@ class Tournament {
 		return this.teamDraws;
 	}
 	public int comparedTo(Tournament that) {
-		if (this.getTeamWins() > that.getTeamWins())
+		if (this.getTeamWins() > that.getTeamWins()){
 			return 1;
-		else if (this.getTeamWins() < that.getTeamWins())
+		} else if (this.getTeamWins() < that.getTeamWins()) {
 			return -1;
-		if (this.getTeamLooses() < that.getTeamLooses())
+		}
+		if (this.getTeamLooses() < that.getTeamLooses()) {
 			return 1;
-		else if (this.getTeamLooses() > that.getTeamLooses())
+		} else if (this.getTeamLooses() > that.getTeamLooses()) {
 			return -1;
-		if (this.getTeamDraws() > that.getTeamDraws())
+		}
+		if (this.getTeamDraws() > that.getTeamDraws()) {
 			return 1;
-		else if (this.getTeamDraws() < that.getTeamDraws())
+		} else if (this.getTeamDraws() < that.getTeamDraws()) {
 			return -1;
+		}
 		return 0;
 	}
 }
@@ -73,7 +76,7 @@ class SelectionSort {
 		a[j] = swap;
 	}
 	public void sort() {
-		for(int i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++) {
 			int min = i;
 			for (int j = i + 1; j < size; j++) {
 				if (tournamentArray[j].comparedTo(tournamentArray[min]) == 1) {

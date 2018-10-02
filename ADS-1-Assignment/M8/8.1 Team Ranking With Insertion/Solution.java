@@ -98,6 +98,7 @@ public class Solution {
 				Integer.parseInt(tokens[2]),
 				Integer.parseInt(tokens[3])));
 		}
+		sortOf.sort();
 		System.out.println(sortOf.toString());
 	}
 }	

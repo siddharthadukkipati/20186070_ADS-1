@@ -81,8 +81,8 @@ class SelectionSort {
 			for (int j = i + 1; j < size; j++) {
 				if (tournamentArray[j].comparedTo(tournamentArray[min]) == 1) {
 					min = j;
-					exchange(tournamentArray, i, min);
 				}
+				exchange(tournamentArray, i, min);
 			}
 		}
 	}

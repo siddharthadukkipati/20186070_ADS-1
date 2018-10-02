@@ -67,6 +67,23 @@ class InsertionSort {
         inputStr += tournamentArray[k].getTeamName();
         return inputStr;
 	}
+	public void exchange(Tournament[] a, int i, int j) {
+		Tournament swap = a[i];
+		a[i] = a[j];
+		a[j] = swap;
+	}
+	public void sort() {
+		// int n = tournamentArray.length;
+		for (int i = 0; i < size; i++) {
+			for (int j = i; j > 0; j--) {
+				if (tournamentArray[j].comparedTo(tournamentArray[j-1]) == 1) {
+					exchange(tournamentArray, j, j-1);
+				} else {
+					break;
+				}
+			}
+		}
+	}
 }
 public class Solution {
 	public static void main(String[] args) {

@@ -58,8 +58,6 @@ class InsertionSort {
 		}
 		tournamentArray[size++] = team;
 	}
-	// public void sort() 
-
 }
 public class Solution {
 	public static void main(String[] args) {
@@ -73,8 +71,7 @@ public class Solution {
 				Integer.parseInt(tokens[1]),
 				Integer.parseInt(tokens[2]),
 				Integer.parseInt(tokens[3])));
-			System.out.println();
+			System.out.println(sortOf);
 		}
-	
 	}
 }

@@ -62,9 +62,9 @@ class InsertionSort {
 		int k = 0;
         String inputStr = "";
         for (k = 0; k < size - 1; k++) {
-            inputStr = tournamentArray[k].getTeamName() + ",";
+            inputStr += tournamentArray[k].getTeamName() + ",";
         }
-        // inputStr += tournamentArray[k].getTeamName();
+        inputStr += tournamentArray[k].getTeamName();
         return inputStr;
 	}
 }

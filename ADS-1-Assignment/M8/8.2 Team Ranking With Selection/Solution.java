@@ -39,10 +39,10 @@ class Tournament {
 		return 0;
 	}
 }
-class InsertionSort {
+class SelectionSort {
 	private Tournament[] tournamentArray;
 	private int size;
-	InsertionSort() {
+	SelectionSort() {
 	this.tournamentArray = new Tournament[10];
 	this.size = 0;
 	}
@@ -72,11 +72,11 @@ class InsertionSort {
 		a[i] = a[j];
 		a[j] = swap;
 	}
-	public void sort(Tournament[] a) {
+	public void sort() {
 		for(int i = 0; i < size; i++) {
 			int min = i;
 			for (int j = i + 1; j < size; j++) {
-				if (a[j].comparedTo(a[min]) == 1) {
+				if (tournamentArray[j].comparedTo(tournamentArray[min]) == 1) {
 					min = j;
 					exchange(tournamentArray, i, min);
 				}
@@ -89,7 +89,7 @@ public class Solution {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Tournament teamObj;
-		InsertionSort sortOf = new InsertionSort();
+		SelectionSort sortOf = new SelectionSort();
 		// List lstObj = new List();
 		while(sc.hasNext()) {
 			String[] tokens = sc.nextLine().split(",");
@@ -98,7 +98,7 @@ public class Solution {
 				Integer.parseInt(tokens[2]),
 				Integer.parseInt(tokens[3])));
 		}
-		// sortOf.sort();
+		sortOf.sort();
 		System.out.println(sortOf.toString());
 	}
 }	

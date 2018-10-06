@@ -1,14 +1,32 @@
 import java.util.Scanner;
-class InsertionSort {
-	void exchange(studentData[] a, int i, int j) {
-		studentData temp = a[i];
+/**
+*Insertion sorting to implement the sorting.
+*/
+class Sorting {
+	/**
+	*exchange method is used to exchange the values after there are sorted.
+	*@param a student data.
+	*@param i first value to be exchange.
+	*@param j second value to be exchnaged.
+	*/
+	public void exchange(StudentData[] a, int i, int j) {
+		StudentData temp = a[i];
 		a[i] = a[j];
 		a[j] = temp;
 	}
-	boolean less(studentData std1, studentData std2) {
+	/**
+	*less method is used to compare which of the two are less.
+	*@param std1 student data 1.
+	*@param std2 student data 2.
+	*/
+	public boolean less(StudentData std1, StudentData std2) {
 		return std1.compareTo(std2) == -1;
 	}
-	void sort(studentData[] students) {
+	/**
+	*Insertion sort code to sort the students.
+	*@param students students data in array format.
+	*/
+	public void sort(StudentData[] students) {
 		for (int i = 1; i < students.length; i++) {
 			for (int j = i; j > 0; j--) {
 				if (less(students[j - 1], students[j])) {
@@ -20,15 +38,18 @@ class InsertionSort {
 		}
 	}
 }
-class studentData implements Comparable<studentData> {
-	String studentName;
-	String dateOfBirth;
-	int sub1marks;
-	int sub2marks;
-	int sub3marks;
-	int totalMarks;
-	String reservationCat;
-	studentData(String name, String dob, int sub1, int sub2, int sub3, int total, String category) {
+/**
+*Students data class where in we store the students data.
+*/
+class StudentData implements Comparable<StudentData> {
+	public String studentName;
+	public String dateOfBirth;
+	public int sub1marks;
+	public int sub2marks;
+	public int sub3marks;
+	public int totalMarks;
+	public String reservationCat;
+	StudentData(String name, String dob, int sub1, int sub2, int sub3, int total, String category) {
 		this.studentName = name;
 		this.dateOfBirth = dob;
 		this.sub1marks = sub1;
@@ -41,7 +62,7 @@ class studentData implements Comparable<studentData> {
 		String[] check = dateOfBirth.split("-");
 		return check;
 	}
-	public int compareTo(studentData that) {
+	public int compareTo(StudentData that) {
 		if (this.totalMarks > that.totalMarks) {
 			return 1;
 		} else if (this.totalMarks < that.totalMarks) {
@@ -80,7 +101,7 @@ class Solution {
 	Solution() {
 		//unused
 	}
-	public static void mertiList(studentData[] a, int vacancy, int open, int bc, int sc, int st) {
+	public static void mertiList(StudentData[] a, int vacancy, int open, int bc, int sc, int st) {
 		for (int i = 0; i < a.length && vacancy > 0; i++) {
 			if (open > 0) {
 				System.out.println(a[i].studentName + "," +
@@ -109,7 +130,7 @@ class Solution {
 		}
 		vacancy--;
 	}
-	public static void toString(studentData[] a) {
+	public static void toString(StudentData[] a) {
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i].studentName + "," +
 			                   a[i].totalMarks + "," +
@@ -119,7 +140,7 @@ class Solution {
 	public static void main(String[] args) {
 		Scanner scan =  new Scanner(System.in);
 		int n = Integer.parseInt(scan.nextLine());
-		studentData[] students = new studentData[n];
+		StudentData[] students = new StudentData[n];
 		int vacancyNumber = Integer.parseInt(scan.nextLine());
 		int openVacancy = Integer.parseInt(scan.nextLine());
 		int bcVacancy = Integer.parseInt(scan.nextLine());
@@ -128,12 +149,12 @@ class Solution {
 		for (int i = 0; i < n; i++) {
 			String line = scan.nextLine();
 			String[] tokens = line.split(",");
-			studentData eachStudentInfo = new studentData(tokens[0], tokens[1],
+			StudentData eachStudentInfo = new StudentData(tokens[0], tokens[1],
 			        Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
 			        Integer.parseInt(tokens[4]), Integer.parseInt(tokens[5]), tokens[6]);
 			students[i] = eachStudentInfo;
 		}
-		InsertionSort insertion = new InsertionSort();
+		Sorting insertion = new Sorting();
 		insertion.sort(students);
 		toString(students);
 		System.out.println(); //empty line.

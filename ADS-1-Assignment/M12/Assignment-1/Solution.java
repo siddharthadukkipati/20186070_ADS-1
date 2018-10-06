@@ -42,14 +42,46 @@ class Sorting {
 *Students data class where in we store the students data.
 */
 class StudentData implements Comparable<StudentData> {
+	/**
+	* Student name.
+	*/
 	public String studentName;
+	/**
+	*Student date of birth.
+	*/
 	public String dateOfBirth;
+	/**
+	*Student subject 1 marks.
+	*/
 	public int sub1marks;
+	/**
+	*Student subject 2 marks.
+	*/
 	public int sub2marks;
+	/**
+	*Student subject 3 marks.
+	*/
 	public int sub3marks;
+	/**
+	*Student's total marks.
+	*/
 	public int totalMarks;
+	/**
+	*Student Reservation Cateogory.
+	*/
 	public String reservationCat;
-	StudentData(String name, String dob, int sub1, int sub2, int sub3, int total, String category) {
+	/**
+	*COnstructor which loads the Students details.
+	*@param name student name.
+	*@param dob student date of birth.
+	*@param sub1 student subject 1 marks.
+	*@param sub2 student subject 2 marks.
+	*@param sub3 students subject 3 marks.
+	*@param total students total marks.
+	*@param category students reservation category.
+	*/
+	StudentData(String name, String dob, int sub1, int sub2,
+		int sub3, int total, String category) {
 		this.studentName = name;
 		this.dateOfBirth = dob;
 		this.sub1marks = sub1;
@@ -58,10 +90,17 @@ class StudentData implements Comparable<StudentData> {
 		this.totalMarks = total;
 		this.reservationCat = category;
 	}
-	String[] dateCheck() {
+	/**
+	*this method is used to divide and check the date. 
+	*/
+	public String[] dateCheck() {
 		String[] check = dateOfBirth.split("-");
 		return check;
 	}
+	/**
+	*this method is used to compare the information of the student.
+	*@param that second student to which comparison has to take place.
+	*/
 	public int compareTo(StudentData that) {
 		if (this.totalMarks > that.totalMarks) {
 			return 1;
@@ -78,37 +117,56 @@ class StudentData implements Comparable<StudentData> {
 		} else if (this.sub2marks < that.sub2marks) {
 			return -1;
 		}
-		if (Integer.parseInt(this.dateCheck()[2]) > Integer.parseInt(that.dateCheck()[2])) {
+		if (Integer.parseInt(this.dateCheck()[2])
+			> Integer.parseInt(that.dateCheck()[2])) {
 			return 1;
-		} else if (Integer.parseInt(this.dateCheck()[2]) < Integer.parseInt(that.dateCheck()[2])) {
+		} else if (Integer.parseInt(this.dateCheck()[2])
+			< Integer.parseInt(that.dateCheck()[2])) {
 			return -1;
 		}
-		if (Integer.parseInt(this.dateCheck()[1]) > Integer.parseInt(that.dateCheck()[1])) {
+		if (Integer.parseInt(this.dateCheck()[1])
+			> Integer.parseInt(that.dateCheck()[1])) {
 			return 1;
-		} else if (Integer.parseInt(this.dateCheck()[1]) < Integer.parseInt(that.dateCheck()[1])) {
+		} else if (Integer.parseInt(this.dateCheck()[1])
+			< Integer.parseInt(that.dateCheck()[1])) {
 			return -1;
 		}
-		if (Integer.parseInt(this.dateCheck()[0]) > Integer.parseInt(that.dateCheck()[0])) {
+		if (Integer.parseInt(this.dateCheck()[0])
+			> Integer.parseInt(that.dateCheck()[0])) {
 			return 1;
-		} else if (Integer.parseInt(this.dateCheck()[0]) < Integer.parseInt(that.dateCheck()[0])) {
+		} else if (Integer.parseInt(this.dateCheck()[0])
+			< Integer.parseInt(that.dateCheck()[0])) {
 			return -1;
 		}
 		return 0;
 	}
 
 }
+/**
+*Soultion class deals with the main function and also the selction
+*of merit list and the to string method as well.
+*/
 class Solution {
+	/**
+	*default constructor.
+	*/
 	Solution() {
-		//unused
 	}
-	public static void mertiList(StudentData[] a, int vacancy, int open, int bc, int sc, int st) {
+	/**
+	*mert list method where in the students are
+	*divided according to the marks and the reservation.
+	*/
+	public static void mertiList(StudentData[] a, int vacancy, int open,
+		int bc, int sc, int st) {
 		for (int i = 0; i < a.length && vacancy > 0; i++) {
 			if (open > 0) {
 				System.out.println(a[i].studentName + "," +
 				                   a[i].totalMarks + "," +
 				                   a[i].reservationCat);
 				open--;
-			} else if (a[i].reservationCat.equals("BC") || a[i].reservationCat.equals("SC") || a[i].reservationCat.equals("ST")) {
+			} else if (a[i].reservationCat.equals("BC")
+				|| a[i].reservationCat.equals("SC")
+				|| a[i].reservationCat.equals("ST")) {
 				if (a[i].reservationCat.equals("BC") && bc > 0) {
 					System.out.println(a[i].studentName + "," +
 					                   a[i].totalMarks + "," +
@@ -130,6 +188,10 @@ class Solution {
 		}
 		vacancy--;
 	}
+	/**
+	*To string method which convterts to String type.
+	*@param a Student data type.
+	*/
 	public static void toString(StudentData[] a) {
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i].studentName + "," +
@@ -137,7 +199,11 @@ class Solution {
 			                   a[i].reservationCat);
 		}
 	}
-	public static void main(String[] args) {
+	/**
+	*main method to read the input based on the given test cases.
+	*@param args String type.
+	*/
+	public static void main(final String[] args) {
 		Scanner scan =  new Scanner(System.in);
 		int n = Integer.parseInt(scan.nextLine());
 		StudentData[] students = new StudentData[n];
@@ -151,14 +217,16 @@ class Solution {
 			String[] tokens = line.split(",");
 			StudentData eachStudentInfo = new StudentData(tokens[0], tokens[1],
 			        Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
-			        Integer.parseInt(tokens[4]), Integer.parseInt(tokens[5]), tokens[6]);
+			        Integer.parseInt(tokens[4]),
+			        Integer.parseInt(tokens[5]), tokens[6]);
 			students[i] = eachStudentInfo;
 		}
 		Sorting insertion = new Sorting();
 		insertion.sort(students);
 		toString(students);
 		System.out.println(); //empty line.
-		mertiList(students, vacancyNumber, openVacancy, bcVacancy, scVacancy, stVacancy);
+		mertiList(students, vacancyNumber, openVacancy,
+			bcVacancy, scVacancy, stVacancy);
 	}
 
 }

@@ -136,7 +136,7 @@ class Solution {
 		InsertionSort insertion = new InsertionSort();
 		insertion.sort(students);
 		toString(students);
-		// System.out.println(); //empty line.
+		System.out.println(); //empty line.
 		mertiList(students, vacancyNumber, openVacancy, bcVacancy, scVacancy, stVacancy);
 	}
 

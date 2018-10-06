@@ -81,7 +81,8 @@ class StudentData implements Comparable<StudentData> {
     *@param category students reservation category.
     */
     StudentData(final String name, final String dob, final int sub1, 
-        final int sub2, final int sub3, final int total, final String category) {
+        final int sub2, final int sub3, final int total,
+        final String category) {
         this.studentName = name;
         this.dateOfBirth = dob;
         this.sub1marks = sub1;
@@ -103,7 +104,7 @@ class StudentData implements Comparable<StudentData> {
     *@param that second student to which comparison has to take place.
     *@return integer value.
     */
-    public int compareTo(StudentData that) {
+    public int compareTo(final StudentData that) {
         if (this.totalMarks > that.totalMarks) {
             return 1;
         } else if (this.totalMarks < that.totalMarks) {
@@ -152,7 +153,7 @@ class Solution {
     /**
     *default constructor.
     */
-    Solution() {
+    private Solution() {
     }
     /**
     *mert list method where in the students are
@@ -199,7 +200,7 @@ class Solution {
     *To string method which convterts to String type.
     *@param a Student data type.
     */
-    public static void toString(StudentData[] a) {
+    public static void toString(final StudentData[] a) {
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i].studentName + ","
                 + a[i].totalMarks + ","
@@ -228,7 +229,8 @@ class Solution {
             String[] tokens = line.split(",");
             StudentData eachStudentInfo =
             new StudentData(tokens[0], tokens[1],
-                    Integer.parseInt(tokens[2]), Integer.parseInt(tokens[three]),
+                    Integer.parseInt(tokens[2]),
+                    Integer.parseInt(tokens[three]),
                     Integer.parseInt(tokens[four]),
                     Integer.parseInt(tokens[five]), tokens[six]);
             students[i] = eachStudentInfo;

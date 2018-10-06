@@ -9,7 +9,7 @@ class Sorting {
     *@param i first value to be exchange.
     *@param j second value to be exchnaged.
     */
-    public void exchange(StudentData[] a, int i, int j) {
+    public void exchange(final StudentData[] a, final int i, final int j) {
         StudentData temp = a[i];
         a[i] = a[j];
         a[j] = temp;
@@ -19,14 +19,14 @@ class Sorting {
     *@param std1 student data 1.
     *@param std2 student data 2.
     */
-    public boolean less(StudentData std1, StudentData std2) {
+    public boolean less(final StudentData std1, final StudentData std2) {
         return std1.compareTo(std2) == -1;
     }
     /**
     *Insertion sort code to sort the students.
     *@param students students data in array format.
     */
-    public void sort(StudentData[] students) {
+    public void sort(final StudentData[] students) {
         for (int i = 1; i < students.length; i++) {
             for (int j = i; j > 0; j--) {
                 if (less(students[j - 1], students[j])) {
@@ -80,7 +80,7 @@ class StudentData implements Comparable<StudentData> {
     *@param total students total marks.
     *@param category students reservation category.
     */
-    StudentData(final String name, final String dob, final int sub1, 
+    StudentData(final String name, final String dob, final int sub1,
         final int sub2, final int sub3, final int total,
         final String category) {
         this.studentName = name;
@@ -149,7 +149,7 @@ class StudentData implements Comparable<StudentData> {
 *Soultion class deals with the main function and also the selction
 *of merit list and the to string method as well.
 */
-class Solution {
+ final class Solution {
     /**
     *default constructor.
     */

@@ -11,6 +11,5 @@ Starting audit...
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1_20186070\20186070_ADS-1\ADS-1-Assignment\M12\Assignment-1\Solution.java:118:16: Variable 'sub3marks' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1_20186070\20186070_ADS-1\ADS-1-Assignment\M12\Assignment-1\Solution.java:122:16: Variable 'totalMarks' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1_20186070\20186070_ADS-1\ADS-1-Assignment\M12\Assignment-1\Solution.java:126:19: Variable 'reservationCat' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1_20186070\20186070_ADS-1\ADS-1-Assignment\M12\Assignment-1\Solution.java:201: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 13 errors.
+Checkstyle ends with 12 errors.

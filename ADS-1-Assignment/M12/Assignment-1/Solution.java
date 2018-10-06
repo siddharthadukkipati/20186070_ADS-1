@@ -197,8 +197,6 @@ class StudentData implements Comparable<StudentData> {
         }
         return 0;
     }
-
-    
 }
 /**
 *Soultion class deals with the main function and also the selction

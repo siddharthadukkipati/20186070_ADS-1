@@ -18,6 +18,7 @@ class Sorting {
     *less method is used to compare which of the two are less.
     *@param std1 student data 1.
     *@param std2 student data 2.
+    *@return returns a boolean value.
     */
     public boolean less(final StudentData std1, final StudentData std2) {
         return std1.compareTo(std2) == -1;
@@ -37,6 +38,59 @@ class Sorting {
             }
         }
     }
+    /**
+    *mert list method where in the students are
+    *divided according to the marks and the reservation.
+    *@param a Student data type.
+    *@param vacancy inrteger type.
+    *@param open integer type.
+    *@param bc integer type.
+    *@param sc integer type.
+    *@param st integer type.
+    */
+    public static void mertiList(final StudentData[] a, int vacancy, int open,
+        int bc, int sc, int st) {
+        for (int i = 0; i < a.length && vacancy > 0; i++) {
+            if (open > 0) {
+                System.out.println(a[i].studentName + ","
+                    + a[i].totalMarks + ","
+                    + a[i].reservationCat);
+                open--;
+            } else if (a[i].reservationCat.equals("BC")
+                || a[i].reservationCat.equals("SC")
+                || a[i].reservationCat.equals("ST")) {
+                if (a[i].reservationCat.equals("BC") && bc > 0) {
+                    System.out.println(a[i].studentName + ","
+                        + a[i].totalMarks + ","
+                        + a[i].reservationCat);
+                    bc--;
+                } else if (a[i].reservationCat.equals("SC") && sc > 0) {
+                    System.out.println(a[i].studentName + ","
+                        + a[i].totalMarks + ","
+                        + a[i].reservationCat);
+                    sc--;
+                } else if (a[i].reservationCat.equals("ST") && st > 0) {
+                    System.out.println(a[i].studentName + ","
+                        + a[i].totalMarks + ","
+                        + a[i].reservationCat);
+                    st--;
+                }
+            }
+        }
+        vacancy--;
+    }
+    /**
+    *To string method which convterts to String type.
+    *@param a Student data type.
+    */
+    public static void toString(final StudentData[] a) {
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i].studentName + ","
+                + a[i].totalMarks + ","
+                + a[i].reservationCat);
+        }
+    }
+
 }
 /**
 *Students data class where in we store the students data.
@@ -144,6 +198,7 @@ class StudentData implements Comparable<StudentData> {
         return 0;
     }
 
+    
 }
 /**
 *Soultion class deals with the main function and also the selction
@@ -154,58 +209,6 @@ class StudentData implements Comparable<StudentData> {
     *default constructor.
     */
     private Solution() {
-    }
-    /**
-    *mert list method where in the students are
-    *divided according to the marks and the reservation.
-    *@param a Student data type.
-    *@param vacancy inrteger type.
-    *@param open integer type.
-    *@param bc integer type.
-    *@param sc integer type.
-    *@param st integer type.
-    */
-    public static void mertiList(final StudentData[] a, int vacancy, int open,
-        int bc, int sc, int st) {
-        for (int i = 0; i < a.length && vacancy > 0; i++) {
-            if (open > 0) {
-                System.out.println(a[i].studentName + ","
-                    + a[i].totalMarks + ","
-                    + a[i].reservationCat);
-                open--;
-            } else if (a[i].reservationCat.equals("BC")
-                || a[i].reservationCat.equals("SC")
-                || a[i].reservationCat.equals("ST")) {
-                if (a[i].reservationCat.equals("BC") && bc > 0) {
-                    System.out.println(a[i].studentName + ","
-                        + a[i].totalMarks + ","
-                        + a[i].reservationCat);
-                    bc--;
-                } else if (a[i].reservationCat.equals("SC") && sc > 0) {
-                    System.out.println(a[i].studentName + ","
-                        + a[i].totalMarks + ","
-                        + a[i].reservationCat);
-                    sc--;
-                } else if (a[i].reservationCat.equals("ST") && st > 0) {
-                    System.out.println(a[i].studentName + ","
-                        + a[i].totalMarks + ","
-                        + a[i].reservationCat);
-                    st--;
-                }
-            }
-        }
-        vacancy--;
-    }
-    /**
-    *To string method which convterts to String type.
-    *@param a Student data type.
-    */
-    public static void toString(final StudentData[] a) {
-        for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i].studentName + ","
-                + a[i].totalMarks + ","
-                + a[i].reservationCat);
-        }
     }
     /**
     *main method to read the input based on the given test cases.
@@ -237,9 +240,9 @@ class StudentData implements Comparable<StudentData> {
         }
         Sorting insertion = new Sorting();
         insertion.sort(students);
-        toString(students);
+        insertion.toString(students);
         System.out.println(); //empty line.
-        mertiList(students, vacancyNumber, openVacancy,
+        insertion.mertiList(students, vacancyNumber, openVacancy,
             bcVacancy, scVacancy, stVacancy);
     }
 

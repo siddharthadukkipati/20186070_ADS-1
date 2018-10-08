@@ -1,0 +1,16 @@
+lo	j	hi	0 1 2 3 4 5 6 7 8 9 10 11
+			E A S Y Q U E S T I O  N
+			Y A T N S S E Q O I U  E
+0	11	11	E A T N S S E Q O I U  Y
+0	2	10	E A E N S S T Q O I U
+0	1	1	A E
+			A
+3	4	10	      I N S T Q O S U
+				  I
+5	8	10			  O S Q S T U
+5	5	7			  O S Q
+6	7	7				Q S
+						Q
+9	9	10					  T U
+
+			A E E I N O Q S S T U  Y

@@ -1,0 +1,3 @@
+The sequence of values returned are -
+
+R, R, P, O, T, Y, I, I, U, Q, E, U

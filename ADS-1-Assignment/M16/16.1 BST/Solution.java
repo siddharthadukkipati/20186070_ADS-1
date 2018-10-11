@@ -4,15 +4,15 @@ import java.util.Scanner;
  */
 class BookDetails implements Comparable {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String name;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String author;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private float price;
     /**
@@ -22,7 +22,8 @@ class BookDetails implements Comparable {
      * @param      bookauthor  The bookauthor
      * @param      bookprice   The bookprice
      */
-    BookDetails(String bookname, String bookauthor, float bookprice) {
+    BookDetails(final String bookname, final String bookauthor,
+        final float bookprice) {
         this.name = bookname;
         this.author = bookauthor;
         this.price = bookprice;
@@ -52,13 +53,13 @@ class BookDetails implements Comparable {
         return this.price;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      object  The object
      *
      * @return     { description_of_the_return_value }
      */
-    public int compareTo(Object object) {
+    public int compareTo(final Object object) {
         BookDetails that = (BookDetails) object;
         return this.name.compareTo(that.name);
     }
@@ -68,15 +69,15 @@ class BookDetails implements Comparable {
  */
 class Node {
     /**
-     * { var_description }
+     * { var_description }.
      */
     public BookDetails key;
     /**
-     * { var_description }
+     * { var_description }.
      */
     public int val;
     /**
-     * { item_description }
+     * { item_description }.
      */
     public Node left, right;
     /**
@@ -85,7 +86,7 @@ class Node {
      * @param      key   The key
      * @param      val   The value
      */
-    public Node(BookDetails key, int val) {
+    public Node(final BookDetails key, int val) {
         this.key = key;
         this.val = val;
         left = null;
@@ -98,7 +99,7 @@ class Node {
  */
 class BinarySearchTree {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private Node root;
     /**
@@ -108,7 +109,7 @@ class BinarySearchTree {
         root = null;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -116,13 +117,13 @@ class BinarySearchTree {
         return root;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
      */
-    public int get(BookDetails key) {
+    public int get(final BookDetails key) {
         //System.out.println("hello");
         Node x = root;
         while (x != null) {
@@ -138,17 +139,16 @@ class BinarySearchTree {
         return -1;
     }
     /**
-     * { function_description }
-     *
+     * { function_description.
      * @param      key   The key
      * @param      val   The value
      */
-    public void put(BookDetails key, int val) {
+    public void put(final BookDetails key, final int val) {
         //System.out.println(key.getName()+"put 2 ints "+val);
         root = put(root, key, val);
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      x     { parameter_description }
      * @param      key   The key
@@ -156,7 +156,7 @@ class BinarySearchTree {
      *
      * @return     { description_of_the_return_value }
      */
-    private Node put(Node x, BookDetails key, int val) {
+    private Node put(final Node x, final BookDetails key, final int val) {
         if (x == null) {
             return new Node(key, val);
             //break;
@@ -176,7 +176,7 @@ class BinarySearchTree {
     }
 }
 /**
- * { item_description }
+ * { item_description }.
  */
 public final class Solution {
     /**
@@ -186,23 +186,25 @@ public final class Solution {
 
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         BinarySearchTree bstobj = new BinarySearchTree();
         while (sc.hasNextLine()) {
             String[] tokens = sc.nextLine().split(",");
             switch (tokens[0]) {
             case "put":
-                BookDetails deobj = new BookDetails(tokens[1], tokens[2], Float.parseFloat(tokens[2 + 1]));
+                BookDetails deobj = new BookDetails(tokens[1], tokens[2],
+                    Float.parseFloat(tokens[2 + 1]));
                 bstobj.put(deobj, Integer.parseInt(tokens[2 + 2]));
                 break;
             case "get":
                 //bstobj.get(deobj);
-                deobj = new BookDetails(tokens[1], tokens[2], Float.parseFloat(tokens[2 + 1]));
+                deobj = new BookDetails(tokens[1], tokens[2],
+                    Float.parseFloat(tokens[2 + 1]));
                 if (bstobj.get(deobj) == -1) {
                     System.out.println("null");
                 } else {

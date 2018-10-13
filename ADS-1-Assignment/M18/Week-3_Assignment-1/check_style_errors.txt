@@ -19,10 +19,10 @@ Starting audit...
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:40:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:40:33: Parameter args should be final. [FinalParameters]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:51: Line is longer than 80 characters (found 99). [LineLength]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:56: Line is longer than 80 characters (found 94). [LineLength]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:57: Line is longer than 80 characters (found 94). [LineLength]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:61: Line is longer than 80 characters (found 100). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:56: Line is longer than 80 characters (found 98). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:60: Line is longer than 80 characters (found 104). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:63: Line is longer than 80 characters (found 98). [LineLength]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:64:28: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:67: Line is longer than 80 characters (found 103). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:67: Line is longer than 80 characters (found 107). [LineLength]
 Audit done.
 Checkstyle ends with 25 errors.

@@ -53,23 +53,23 @@ class Solution {
 				maxpqObj.insert(stockObj);
 				count++;
 			}
-			BinarySearchTree<String, Float> stockBest = new  BinarySearchTree<>();
-			BinarySearchTree<String, Float> stockWorst = new BinarySearchTree<>();
+			BinarySearchTree<String, Float> bestPerformer = new  BinarySearchTree<>();
 			for (int j = 0; j < five; j++) {
 				Stock maxpqBest = maxpqObj.delMax();
 				System.out.println(maxpqBest);
-				stockBest.put(maxpqBest.getstockname(), maxpqBest.getstockchange());
+				bestPerformer.put(maxpqBest.getstockname(), maxpqBest.getstockchange());
 			}
 			System.out.println();
+			BinarySearchTree<String, Float> worstPerformer = new BinarySearchTree<>();
 			for(int k = 0; k < five; k++) {
 				Stock minpqWorst = minpqObj.delMin();
 				System.out.println(minpqWorst);
-				stockWorst.put(minpqWorst.getstockname(), minpqWorst.getstockchange());
+				worstPerformer.put(minpqWorst.getstockname(), minpqWorst.getstockchange());
 			}
 			System.out.println();
-			// stockBest.print();
+			// bestPerformer.print();
 			// System.out.println();
-			// stockWorst.print();
+			// worstPerformer.print();
 			// System.out.println();
 		}
 	}

@@ -120,10 +120,10 @@ final class Solution {
                     minpqWorst.getstockchange());
             }
             System.out.println();
-            // bestPerformer.print();
-            // System.out.println();
-            // worstPerformer.print();
-            // System.out.println();
+            bestPerformer.print();
+            System.out.println();
+            worstPerformer.print();
+            System.out.println();
         }
     }
 }

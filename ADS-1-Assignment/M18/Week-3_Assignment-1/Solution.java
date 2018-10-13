@@ -17,12 +17,12 @@ class Stock implements Comparable<Stock> {
      * @param      name    The name
      * @param      change  The change
      */
-    Stock(String name, float change) {
+    Stock(final String name, final float change) {
         this.stockName = name;
         this.stockChange = change;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -30,7 +30,7 @@ class Stock implements Comparable<Stock> {
         return this.stockName;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -38,13 +38,13 @@ class Stock implements Comparable<Stock> {
         return this.stockChange;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      other  The other
      *
      * @return     { description_of_the_return_value }
      */
-    public int compareTo(Stock other) {
+    public int compareTo(final Stock other) {
         if (this.stockChange > other.stockChange) {
             return 1;
         }
@@ -66,7 +66,7 @@ class Stock implements Comparable<Stock> {
      */
     public String toString() {
         String inputStr = "";
-        inputStr = inputStr + this.stockName + " " +this.stockChange;
+        inputStr = inputStr + this.stockName + " " + this.stockChange;
         return inputStr;
     }
 }
@@ -81,11 +81,11 @@ class Solution {
         //unused.
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int stockLength = Integer.parseInt(scan.nextLine());
         final int six = 6;
@@ -113,7 +113,7 @@ class Solution {
             System.out.println();
             BinarySearchTree<String, Float> worstPerformer
             = new BinarySearchTree<>();
-            for(int k = 0; k < five; k++) {
+            for (int k = 0; k < five; k++) {
                 Stock minpqWorst = minpqObj.delMin();
                 System.out.println(minpqWorst);
                 worstPerformer.put(minpqWorst.getstockname(),
@@ -127,3 +127,4 @@ class Solution {
         }
     }
 }
+

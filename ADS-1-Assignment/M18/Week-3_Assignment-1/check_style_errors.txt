@@ -2,16 +2,6 @@ Starting audit...
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:6: First sentence should end with a period. [JavadocStyle]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:10: First sentence should end with a period. [JavadocStyle]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:20:11: Parameter name should be final. [FinalParameters]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:20:24: Parameter change should be final. [FinalParameters]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:24: First sentence should end with a period. [JavadocStyle]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:32: First sentence should end with a period. [JavadocStyle]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:40: First sentence should end with a period. [JavadocStyle]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:47:26: Parameter other should be final. [FinalParameters]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:69:53: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:76: Class Solution should be declared as final. [FinalClass]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:83: First sentence should end with a period. [JavadocStyle]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:88:29: Parameter args should be final. [FinalParameters]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:116:16: 'for' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 4 errors.

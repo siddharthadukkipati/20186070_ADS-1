@@ -1,98 +1,151 @@
 import java.util.Scanner;
+/**
+ * Class for stock.
+ */
 class Stock implements Comparable<Stock> {
-	private String stockname;
-	private float stockchange;
-	Stock(String name, float change) {
-		this.stockname = name;
-		this.stockchange = change;
+	/**
+     * { var_description }.
+     */
+    private String stockName;
+    /**
+     * { var_description }.
+     */
+	private float stockChange;
+    /**
+     * Constructs the object.
+     *
+     * @param      name    The name
+     * @param      change  The change
+     */
+	Stock(final String name, final float change) {
+		this.stockName = name;
+		this.stockChange = change;
 	}
-	public String getstockname() {
-		return this.stockname;
+    /**
+     * Gets the stock name.
+     *
+     * @return     The stock name.
+     */
+	public String getStockName() {
+		return this.stockName;
 	}
-	public float getstockchange() {
-		return this.stockchange;
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
+	public float getstockChange() {
+		return this.stockChange;
 	}
-	public int compareTo(Stock other) {
-		if (this.stockchange > other.stockchange) {
+    /**
+     * { function_description }.
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
+	public int compareTo(final Stock other) {
+		if (this.stockChange > other.stockChange) {
 			return 1;
 		}
-		if (this.stockchange < other.stockchange) {
+		if (this.stockChange < other.stockChange) {
 			return -1;
 		}
-		if (this.stockname.compareTo(other.stockname) > 0) {
+		if (this.stockName.compareTo(other.stockName) > 0) {
 			return 1;
 		}
-		if (this.stockname.compareTo(other.stockname) < 0) {
+		if (this.stockName.compareTo(other.stockName) < 0) {
 			return -1;
 		}
 		return 0;
 	}
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
 	public String toString() {
-		String str = "";
-		str = str + this.stockname + " " + this.stockchange;
-		return str;
+		String inputStr = "";
+		inputStr = inputStr + this.stockName + " " + this.stockChange;
+		return inputStr;
 	}
 }
-class Solution {
+/**
+ * { item_description }.
+ */
+final class Solution {
+    /**
+     * Constructs the object.
+     */
 	private Solution() {
 		//unused.
 	}
-	public static void main(String[] args) {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
-		BinarySearchTree<String, Integer> maxST = new  BinarySearchTree<>();
-		BinarySearchTree<String, Integer> minST = new BinarySearchTree<>();
-		int stocknum = Integer.parseInt(scan.nextLine());
-		for (int i = 0; i < 6; i++) {
+		BinarySearchTree<String, Integer> maxST =
+        new  BinarySearchTree<>();
+		BinarySearchTree<String, Integer> minST =
+        new BinarySearchTree<>();
+		int stockLength = Integer.parseInt(scan.nextLine());
+		final int six = 6;
+        final int five = 5;
+        for (int i = 0; i < 6; i++) {
 			int count = 0;
-			MinPQ<Stock> minpqobj = new MinPQ<>();
-			MaxPQ<Stock> maxpqobj = new MaxPQ<>();
-			while (count < stocknum) {
-				String[] details = scan.nextLine().split(",");
-				Stock stockobj = new Stock(details[0], Float.parseFloat(details[1]));
-				minpqobj.insert(stockobj);
-				maxpqobj.insert(stockobj);
+			MinPQ<Stock> minPQObj = new MinPQ<>();
+			MaxPQ<Stock> maxPQObj = new MaxPQ<>();
+			while (count < stockLength) {
+				String[] stockTokens = scan.nextLine().split(",");
+				Stock stockobj = new Stock(stockTokens[0],
+                    Float.parseFloat(stockTokens[1]));
+				minPQObj.insert(stockobj);
+				maxPQObj.insert(stockobj);
 				count++;
 			}
-			for (int j = 0; j < 5; j++) {
-				Stock maxpqbest = maxpqobj.delMax();
-				if (maxST.contains(maxpqbest.getstockname())) {
-					int value = maxST.get(maxpqbest.getstockname());
-					// System.out.println(value + "everytime");
-					maxST.put(maxpqbest.getstockname(), ++value);
-					// System.out.println(maxST.get(maxpqbest.getstockname()));
+			for (int j = 0; j < five; j++) {
+				Stock maxpqBest = maxPQObj.delMax();
+				if (maxST.contains(maxpqBest.getStockName())) {
+					int value = maxST.get(maxpqBest.getStockName());
+
+					maxST.put(maxpqBest.getStockName(), ++value);
+
 				} else {
-					maxST.put(maxpqbest.getstockname(), 1);
+					maxST.put(maxpqBest.getStockName(), 1);
 				}
-				System.out.println(maxpqbest);
+				System.out.println(maxpqBest);
 			}
 			System.out.println();
-			for (int k = 0; k < 5; k++) {
-				Stock minpqworst = minpqobj.delMin();
-				if (minST.contains(minpqworst.getstockname())) {
-					int valuemin = minST.get(minpqworst.getstockname());
-					minST.put(minpqworst.getstockname(), ++valuemin);
+			for (int k = 0; k < five; k++) {
+				Stock minpqWorst = minPQObj.delMin();
+				if (minST.contains(minpqWorst.getStockName())) {
+					int valuemin = minST.get(minpqWorst.getStockName());
+					minST.put(minpqWorst.getStockName(), ++valuemin);
 				} else {
-					minST.put(minpqworst.getstockname(), 1);
+					minST.put(minpqWorst.getStockName(), 1);
 				}
-				System.out.println(minpqworst);
+				System.out.println(minpqWorst);
 			}
 			System.out.println();
 		}
-		int querynum = Integer.parseInt(scan.nextLine());
-		for (int l = 0; l < querynum; l++) {
-			String[] querydetails = scan.nextLine().split(",");
-			if (querydetails[0].equals("get")) {
-				if (querydetails[1].equals("maxST")) {
-					if(!maxST.contains(querydetails[2])) {
+		int queryLength = Integer.parseInt(scan.nextLine());
+		for (int l = 0; l < queryLength; l++) {
+			String[] queryTokens = scan.nextLine().split(",");
+			if (queryTokens[0].equals("get")) {
+				if (queryTokens[1].equals("maxST")) {
+					if(!maxST.contains(queryTokens[2])) {
 						System.out.println("0");
 					} else {
-						System.out.println(maxST.get(querydetails[2]));
+						System.out.println(maxST.get(queryTokens[2]));
 					}
 				} else {
-					if(!minST.contains(querydetails[2])) {
+					if(!minST.contains(queryTokens[2])) {
 						System.out.println("0");
 					} else {
-						System.out.println(minST.get(querydetails[2]));
+						System.out.println(minST.get(queryTokens[2]));
 					}
 				}
 			}

@@ -140,7 +140,7 @@ final class Solution {
             System.out.println();
             for (int k = 0; k < five; k++) {
                 Stock minPQWorst = minpqObj.delMin();
-                System.out.println(minPQWorst);
+                // System.out.println(minPQWorst);
             }
             System.out.println();
         }
@@ -149,9 +149,9 @@ final class Solution {
             String[] queryTokens = scan.nextLine().split(",");
             if (queryTokens[0].equals("get")) {
                 if (queryTokens[1].equals("maxST")) {
-                    // System.out.println(maxST.get(queryTokens[2]));
+                    System.out.println(maxST.get(queryTokens[2]));
                 } else {
-                    // System.out.println(minST.get(queryTokens[2]));
+                    System.out.println(minST.get(queryTokens[2]));
                 }
             }
         }

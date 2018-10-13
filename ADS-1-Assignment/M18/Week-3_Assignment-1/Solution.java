@@ -6,10 +6,10 @@ class Stock implements Comparable<Stock> {
 		this.stockName = name;
 		this.stockChange = change;
 	}
-	public String getStockName() {
+	public String getstockname() {
 		return this.stockName;
 	}
-	public float getStockChange() {
+	public float getstockchange() {
 		return this.stockChange;
 	}
 	public int compareTo(Stock other) {
@@ -29,7 +29,7 @@ class Stock implements Comparable<Stock> {
 	}
 	public String toString() {
 		String inputStr = "";
-		inputStr = inputStr + this.stockName + this.stockChange;
+		inputStr = inputStr + this.stockName + " " +this.stockChange;
 		return inputStr;
 	}
 }
@@ -41,6 +41,7 @@ class Solution {
 		Scanner scan = new Scanner(System.in);
 		int stockLength = Integer.parseInt(scan.nextLine());
 		final int six = 6;
+		final int five = 5;
 		for (int i = 0; i < six; i++) {
 			int count = 0;
 			MinPQ<Stock> minpqObj = new MinPQ<>();
@@ -52,20 +53,24 @@ class Solution {
 				maxpqObj.insert(stockObj);
 				count++;
 			}
-
-			BinarySearchTree<String, Float> stockbest = new  BinarySearchTree<>();
-			BinarySearchTree<String, Float> stockworst = new BinarySearchTree<>();
-			final int five = 5;
+			BinarySearchTree<String, Float> stockBest = new  BinarySearchTree<>();
+			BinarySearchTree<String, Float> stockWorst = new BinarySearchTree<>();
 			for (int j = 0; j < five; j++) {
-				Stock maxpqbest = maxpqObj.delMax();
-				stockbest.put(maxpqbest.getStockName(), maxpqbest.getStockChange());
-				Stock minpqworst = minpqObj.delMin();
-				stockworst.put(minpqworst.getStockName(), minpqworst.getStockChange());
+				Stock maxpqBest = maxpqObj.delMax();
+				System.out.println(maxpqBest);
+				stockBest.put(maxpqBest.getstockname(), maxpqBest.getstockchange());
 			}
-			stockbest.print();
 			System.out.println();
-			stockworst.print();
+			for(int k = 0; k < five; k++) {
+				Stock minpqWorst = minpqObj.delMin();
+				System.out.println(minpqWorst);
+				stockWorst.put(minpqWorst.getstockname(), minpqWorst.getstockchange());
+			}
 			System.out.println();
+			// stockBest.print();
+			// System.out.println();
+			// stockWorst.print();
+			// System.out.println();
 		}
 	}
 }

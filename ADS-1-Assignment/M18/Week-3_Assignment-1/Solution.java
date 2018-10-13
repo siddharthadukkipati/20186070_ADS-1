@@ -149,9 +149,9 @@ final class Solution {
             String[] queryTokens = scan.nextLine().split(",");
             if (queryTokens[0].equals("get")) {
                 if (queryTokens[1].equals("maxST")) {
-                    System.out.println(maxST.get(queryTokens[2]));
+                    // System.out.println(maxST.get(queryTokens[2]));
                 } else {
-                    System.out.println(minST.get(queryTokens[2]));
+                    // System.out.println(minST.get(queryTokens[2]));
                 }
             }
         }

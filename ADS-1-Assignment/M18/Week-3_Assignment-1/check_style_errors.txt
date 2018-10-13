@@ -1,4 +1,6 @@
 Starting audit...
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:151:53: Must have at least one statement. [EmptyBlock]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M18\Week-3_Assignment-1\Solution.java:153:24: Must have at least one statement. [EmptyBlock]
 Audit done.
-Checkstyle ends with 1 errors.
+Checkstyle ends with 3 errors.

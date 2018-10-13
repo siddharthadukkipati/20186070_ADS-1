@@ -94,7 +94,7 @@ final class Solution {
 		int stockLength = Integer.parseInt(scan.nextLine());
 		final int six = 6;
         final int five = 5;
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < six; i++) {
 			int count = 0;
 			MinPQ<Stock> minPQObj = new MinPQ<>();
 			MaxPQ<Stock> maxPQObj = new MaxPQ<>();
@@ -142,7 +142,7 @@ final class Solution {
 						System.out.println(maxST.get(queryTokens[2]));
 					}
 				} else {
-					if(!minST.contains(queryTokens[2])) {
+					if (!minST.contains(queryTokens[2])) {
 						System.out.println("0");
 					} else {
 						System.out.println(minST.get(queryTokens[2]));

@@ -4,11 +4,11 @@ import java.util.Scanner;
  */
 class Stock implements Comparable<Stock> {
     /**
-     * { var_description }
+     * { var_description }.
      */
     private String stockName;
     /**
-     * { var_description }
+     * { var_description }.
      */
     private float stockChange;
     /**
@@ -73,7 +73,7 @@ class Stock implements Comparable<Stock> {
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */

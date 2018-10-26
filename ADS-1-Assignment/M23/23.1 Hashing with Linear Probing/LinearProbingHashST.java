@@ -200,20 +200,24 @@ public class LinearProbingHashST<Key, Value> {
         }
         return true;
     }
-    void display() {
-        String str = "{";
+    /**
+     * { function_description }
+     */
+    String display() {
+        String inputString = "{";
         int i;
         for (i = 0; i < keys.length - 1; i++) {
             if (keys[i] != null) {
-                str += keys[i] + ":" + vals[i] + ", ";
+                inputString += keys[i] + ":" + vals[i] + ", ";
             }
         }
         if (keys[i] != null) {
-            str += keys[i] + ":" + vals[i];
+            inputString += keys[i] + ":" + vals[i];
         } else {
-            str = str.substring(0, str.length() - 2);
+            inputString = inputString.substring(0, inputString.length() - 2);
         }
-        str += "}";
-        System.out.println(str);
+        inputString += "}";
+        // System.out.println(inputString);
+        return inputString;
     }
 }

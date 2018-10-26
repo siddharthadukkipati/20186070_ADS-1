@@ -1,4 +1,4 @@
 Starting audit...
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M23\23.1 Hashing with Linear Probing\Solution.java:5: Class Solution should be declared as final. [FinalClass]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M23\23.1 Hashing with Linear Probing\Solution.java:5:7: 'public' modifier out of order with the JLS suggestions. [ModifierOrder]
 Audit done.
 Checkstyle ends with 1 errors.

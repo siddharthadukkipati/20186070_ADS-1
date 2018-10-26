@@ -203,7 +203,7 @@ public class LinearProbingHashST<Key, Value> {
     /**
      * { function_description }
      */
-    String display() {
+    void display() {
         String inputString = "{";
         int i;
         for (i = 0; i < keys.length - 1; i++) {
@@ -217,7 +217,6 @@ public class LinearProbingHashST<Key, Value> {
             inputString = inputString.substring(0, inputString.length() - 2);
         }
         inputString += "}";
-        // System.out.println(inputString);
-        return inputString;
+        System.out.println(inputString);
     }
 }

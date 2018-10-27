@@ -18,10 +18,10 @@ class StudentData implements Comparable<StudentData> {
         return regNumber;
     }
     public int compareTo(final StudentData that) {
-        if (this.total >= that.total) {
-            return 1;
+        if (this.total > that.total) {
+            return -1;
         }
-        if (this.total <= that.total) {
+        if (this.total < that.total) {
             return -1;
         }
         if (this.regNumber > that.regNumber) {
@@ -53,24 +53,24 @@ public final class Solution {
         while (n > 0) {
             String[] tokens = scan.nextLine().split(" ");
             if (tokens[0].equals("BE")) {
-                double initial = Double.parseDouble(tokens[1]);
-                double finalLast = Double.parseDouble(tokens[2]);
+                double initialMarks = Double.parseDouble(tokens[1]);
+                double finalMarks = Double.parseDouble(tokens[2]);
                 for (StudentData studentData : bstObj.keys()) {
-                    if (studentData.getTotal() >= initial && studentData.getTotal() <= finalLast) {
+                    if (studentData.getTotal() >= initialMarks && studentData.getTotal() <= finalMarks) {
                         System.out.println(studentData.getName());
                     }
                 }
             } else if (tokens[0].equals("LE")) {
-                double marksOfLE = Double.parseDouble(tokens[1]);
+                double regNum = Double.parseDouble(tokens[1]);
                 for (StudentData studentData : bstObj.keys()) {
-                    if (studentData.getTotal() <= marksOfLE) {
+                    if (studentData.getTotal() <= regNum) {
                         System.out.println(studentData.getName());
                     }
                 }
             } else if (tokens[0].equals("GE")) {
-                double marksofGE = Double.parseDouble(tokens[1]);
+                double regNum = Double.parseDouble(tokens[1]);
                 for (StudentData studentData : bstObj.keys()) {
-                    if (studentData.getTotal() >= marksofGE) {
+                    if (studentData.getTotal() >= regNum) {
                         System.out.println(studentData.getName());
                     }
                 }

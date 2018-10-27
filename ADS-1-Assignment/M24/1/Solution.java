@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * Class for student.
+ */
 class Student {
 	private String studentName;
 	private double totalMarks;
@@ -25,34 +28,34 @@ class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int lines = Integer.parseInt(scan.nextLine());
-		SeparateChainingHashST<Integer, Student> schObj;
-		schObj = new SeparateChainingHashST<>();
+		SeparateChainingHashST<Integer, Student> sepChainObj;
+		sepChainObj = new SeparateChainingHashST<>();
 		for(int i = 0; i < lines; i++) {
 			String[] tokens = scan.nextLine().split(",");
-			Student stdObj = new Student(tokens[1], Double.parseDouble(tokens[2]));
-			schObj.put(Integer.parseInt(tokens[0]), stdObj);
+			Student studentObj = new Student(tokens[1], Double.parseDouble(tokens[2]));
+			sepChainObj.put(Integer.parseInt(tokens[0]), studentObj);
 		}
-		// for(Integer i: schObj.keys()) {
+		// for(Integer i: sepChainObj.keys()) {
 		// 	System.out.println(i);
 		// }
 		int queries = Integer.parseInt(scan.nextLine());
 		for (int j = 0; j < queries; j++) {
-			String[] queryTokens = scan.nextLine().split(" ");
-			if(queryTokens[0].equals("get")) {
-				if(Integer.parseInt(queryTokens[2]) == 1) {
-					if (schObj.get(Integer.parseInt(queryTokens[1])) == null) {
+			String[] qTokens = scan.nextLine().split(" ");
+			if(qTokens[0].equals("get")) {
+				if(Integer.parseInt(qTokens[2]) == 1) {
+					if (sepChainObj.get(Integer.parseInt(qTokens[1])) == null) {
 						System.out.println("Student doesn't exists...");
 					} else {
-						System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getName());
+						System.out.println(sepChainObj.get(Integer.parseInt(qTokens[1])).getName());
 					}
-					// System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getName());
+					// System.out.println(sepChainObj.get(Integer.parseInt(qTokens[1])).getName());
 				// } else {
-					// System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getMarks());
+					// System.out.println(sepChainObj.get(Integer.parseInt(qTokens[1])).getMarks());
 				} else {
-					if (schObj.get(Integer.parseInt(queryTokens[1])) == null) {
+					if (sepChainObj.get(Integer.parseInt(qTokens[1])) == null) {
 						System.out.println("Student doesn't exists...");
 					} else {
-						System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getMarks());
+						System.out.println(sepChainObj.get(Integer.parseInt(qTokens[1])).getMarks());
 					}
 				}
 			}

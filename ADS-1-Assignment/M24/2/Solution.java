@@ -27,7 +27,7 @@ class StudentData implements Comparable<StudentData> {
         if (this.regNumber > that.regNumber) {
             return 1;
         }
-        if (this.regNumber <= that.regNumber) {
+        if (this.regNumber < that.regNumber) {
             return -1;
         }
         return 0;
@@ -53,25 +53,25 @@ public final class Solution {
         while (n > 0) {
             String[] tokens = scan.nextLine().split(" ");
             if (tokens[0].equals("BE")) {
-                double less = Double.parseDouble(tokens[1]);
-                double greater = Double.parseDouble(tokens[2]);
-                for (StudentData each : bstObj.keys()) {
-                    if (each.getTotal() >= less && each.getTotal() <= greater) {
-                        System.out.println(each.getName());
+                double initial = Double.parseDouble(tokens[1]);
+                double finalLast = Double.parseDouble(tokens[2]);
+                for (StudentData studentData : bstObj.keys()) {
+                    if (studentData.getTotal() >= initial && studentData.getTotal() <= finalLast) {
+                        System.out.println(studentData.getName());
                     }
                 }
             } else if (tokens[0].equals("LE")) {
-                double value = Double.parseDouble(tokens[1]);
-                for (StudentData each : bstObj.keys()) {
-                    if (each.getTotal() <= value) {
-                        System.out.println(each.getName());
+                double marksOfLE = Double.parseDouble(tokens[1]);
+                for (StudentData studentData : bstObj.keys()) {
+                    if (studentData.getTotal() <= marksOfLE) {
+                        System.out.println(studentData.getName());
                     }
                 }
             } else if (tokens[0].equals("GE")) {
-                double value = Double.parseDouble(tokens[1]);
-                for (StudentData each : bstObj.keys()) {
-                    if (each.getTotal() >= value) {
-                        System.out.println(each.getName());
+                double marksofGE = Double.parseDouble(tokens[1]);
+                for (StudentData studentData : bstObj.keys()) {
+                    if (studentData.getTotal() >= marksofGE) {
+                        System.out.println(studentData.getName());
                     }
                 }
             }

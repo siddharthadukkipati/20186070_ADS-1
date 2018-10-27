@@ -1,10 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:20:13: Parameter name should be final. [FinalParameters]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:20:26: Parameter marks should be final. [FinalParameters]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:61: First sentence should end with a period. [JavadocStyle]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:71:12: 'for' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:83:15: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:84:19: 'if' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 7 errors.

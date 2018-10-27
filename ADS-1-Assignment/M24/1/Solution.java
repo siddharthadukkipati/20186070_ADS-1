@@ -17,7 +17,7 @@ class Student {
      * @param      name   The name
      * @param      marks  The marks
      */
-    Student(String name, double marks) {
+    Student(final String name, final double marks) {
         this.studentName = name;
         this.totalMarks = marks;
     }
@@ -59,7 +59,7 @@ final class Solution {
         //unused
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      args  The arguments
      */
@@ -68,7 +68,7 @@ final class Solution {
         int lines = Integer.parseInt(scan.nextLine());
         SeparateChainingHashST<Integer, Student> sepChainObj;
         sepChainObj = new SeparateChainingHashST<>();
-        for(int i = 0; i < lines; i++) {
+        for (int i = 0; i < lines; i++) {
             String[] tokens = scan.nextLine().split(",");
             Student studentObj = new Student(tokens[1],
                 Double.parseDouble(tokens[2]));
@@ -80,8 +80,8 @@ final class Solution {
         int queries = Integer.parseInt(scan.nextLine());
         for (int j = 0; j < queries; j++) {
             String[] qTokens = scan.nextLine().split(" ");
-            if(qTokens[0].equals("get")) {
-                if(Integer.parseInt(qTokens[2]) == 1) {
+            if (qTokens[0].equals("get")) {
+                if (Integer.parseInt(qTokens[2]) == 1) {
                     if (sepChainObj.get(Integer
                         .parseInt(qTokens[1])) == null) {
                         System.out.println("Student doesn't exists...");

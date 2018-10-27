@@ -1,20 +1,8 @@
 Starting audit...
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:2: Missing a Javadoc comment. [JavadocType]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:3:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:4:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:5:5: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:6: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:6:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:11:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:14:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:17:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:20:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:36: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:36: Missing a Javadoc comment. [JavadocType]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:37:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:40:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:59: Line is longer than 80 characters (found 105). [LineLength]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:79: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:28: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:83: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:114: Line is longer than 80 characters (found 105). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\2\Solution.java:134: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 17 errors.
+Checkstyle ends with 5 errors.

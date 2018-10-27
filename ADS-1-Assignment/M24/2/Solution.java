@@ -18,16 +18,16 @@ class StudentData implements Comparable<StudentData> {
         return regNumber;
     }
     public int compareTo(final StudentData that) {
-        if (this.total >= that.total) {
+        if (this.total > that.total) {
             return 1;
         }
-        if (this.total <= that.total) {
+        if (this.total < that.total) {
             return -1;
         }
-        if (this.regNumber >= that.regNumber) {
+        if (this.regNumber > that.regNumber) {
             return 1;
         }
-        if (this.regNumber <= that.regNumber) {
+        if (this.regNumber < that.regNumber) {
             return -1;
         }
         return 0;

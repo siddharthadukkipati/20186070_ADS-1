@@ -81,6 +81,7 @@ Charles
 Bob
 Knuth
 Maria Cabezas
+Steve Cafferty
 Hank
 Deborah Cadbury
 Dan Caddy
@@ -174,6 +175,7 @@ Neil Cadigan
 Megon
 Meili Cady
 Your Output: 
+Steve Cafferty
 Hank
 Deborah Cadbury
 Dan Caddy
@@ -198,6 +200,7 @@ John
 Tim Cahill
 Abegg
 Brian Caffrey
+Steve Cafferty
 Hank
 Deborah Cadbury
 Dan Caddy
@@ -227,6 +230,7 @@ Rhian Cahill
 Cozbi A. Cabrera
 Sasha Cagen
 Rivest
+Steve Cafferty
 Hank
 Deborah Cadbury
 Dan Caddy
@@ -966,6 +970,7 @@ Sammy Hagar
 Keith Habersberger
 Yamile Saied Méndez
 Namita Jain
+Ed J. Paine
 Jimmy Palmiotti
 Monica Palms
 Macky Pamintuan
@@ -1259,6 +1264,7 @@ Sammy Hagar
 Keith Habersberger
 Yamile Saied Méndez
 Namita Jain
+Ed J. Paine
 Jimmy Palmiotti
 Monica Palms
 Macky Pamintuan
@@ -1457,6 +1463,7 @@ David Jacobs
 Jeannette Haien
 Daniel Hahn
 Sara Palacios
+Ed J. Paine
 Jimmy Palmiotti
 Monica Palms
 Macky Pamintuan
@@ -1582,6 +1589,7 @@ Kinley MacGregor
 Liza Palmer
 Libby Jackson
 Kristin Halbrook
+Ed J. Paine
 Jimmy Palmiotti
 Monica Palms
 Macky Pamintuan

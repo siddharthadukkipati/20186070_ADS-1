@@ -10,7 +10,7 @@ Rivest
 Dan
 Abegg
 ----------------------------------------
-########## Testcase 1: Passed ##########
+########## Testcase 1: Failed ##########
 Expected Output: 
 Clark
 Rhian Cahill
@@ -78,7 +78,6 @@ Charles
 Bob
 Knuth
 Maria Cabezas
-Steve Cafferty
 Hank
 Deborah Cadbury
 Dan Caddy
@@ -104,7 +103,7 @@ Tim Cahill
 Abegg
 Brian Caffrey
 ----------------------------------------
-########## Testcase 2: Passed ##########
+########## Testcase 2: Failed ##########
 Expected Output: 
 Steve Cafferty
 Hank
@@ -169,7 +168,6 @@ Neil Cadigan
 Megon
 Meili Cady
 Your Output: 
-Steve Cafferty
 Hank
 Deborah Cadbury
 Dan Caddy
@@ -194,7 +192,6 @@ John
 Tim Cahill
 Abegg
 Brian Caffrey
-Steve Cafferty
 Hank
 Deborah Cadbury
 Dan Caddy
@@ -224,7 +221,6 @@ Rhian Cahill
 Cozbi A. Cabrera
 Sasha Cagen
 Rivest
-Steve Cafferty
 Hank
 Deborah Cadbury
 Dan Caddy
@@ -232,7 +228,7 @@ Neil Cadigan
 Megon
 Meili Cady
 ----------------------------------------
-########## Testcase 3: Passed ##########
+########## Testcase 3: Failed ##########
 Expected Output: 
 Stuart B. MacBride
 Wayne Pacelle
@@ -961,7 +957,6 @@ Sammy Hagar
 Keith Habersberger
 Yamile Saied Méndez
 Namita Jain
-Ed J. Paine
 Jimmy Palmiotti
 Monica Palms
 Macky Pamintuan
@@ -1255,7 +1250,6 @@ Sammy Hagar
 Keith Habersberger
 Yamile Saied Méndez
 Namita Jain
-Ed J. Paine
 Jimmy Palmiotti
 Monica Palms
 Macky Pamintuan
@@ -1454,7 +1448,6 @@ David Jacobs
 Jeannette Haien
 Daniel Hahn
 Sara Palacios
-Ed J. Paine
 Jimmy Palmiotti
 Monica Palms
 Macky Pamintuan
@@ -1580,7 +1573,6 @@ Kinley MacGregor
 Liza Palmer
 Libby Jackson
 Kristin Halbrook
-Ed J. Paine
 Jimmy Palmiotti
 Monica Palms
 Macky Pamintuan

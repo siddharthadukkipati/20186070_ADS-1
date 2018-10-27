@@ -25,7 +25,8 @@ class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int lines = Integer.parseInt(scan.nextLine());
-		SeparateChainingHashST<Integer, Student> schObj = new SeparateChainingHashST<>();
+		SeparateChainingHashST<Integer, Student> schObj;
+		schObj = new SeparateChainingHashST<>();
 		for(int i = 0; i < lines; i++) {
 			String[] tokens = scan.nextLine().split(",");
 			Student stdObj = new Student(tokens[1], Double.parseDouble(tokens[2]));
@@ -34,5 +35,16 @@ class Solution {
 		// for(Integer i: schObj.keys()) {
 		// 	System.out.println(i);
 		// }
+		int queries = Integer.parseInt(scan.nextLine());
+		for (int j = 0; j < queries; j++) {
+			String[] queryTokens = scan.nextLine().split(" ");
+			if(queryTokens[0].equals("get")) {
+				if(Integer.parseInt(queryTokens[2]) == 1) {
+					System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getName());
+				} else {
+					System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getMarks());
+				}
+			}
+		}
 	}
 }

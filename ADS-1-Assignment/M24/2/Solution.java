@@ -42,7 +42,7 @@ public final class Solution {
         int lines = Integer.parseInt(scan.nextLine());
         BST<StudentData, Integer> bstObj;
         bstObj = new BST<>();
-        StudentData studentObj = null;
+        StudentData studentObj;
         while (lines > 0) {
             String[] num = scan.nextLine().split(",");
             studentObj = new StudentData(num[1], num[2], num[0]);

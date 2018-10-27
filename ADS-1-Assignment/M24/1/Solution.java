@@ -6,6 +6,12 @@ class Student {
 		this.studentName = name;
 		this.totalMarks = marks;
 	}
+	public String getName() {
+		return this.studentName;
+	}
+	public double getMarks() {
+		return this.totalMarks;
+	}
 	public String toString() {
 		String str = "";
 		str = str + this.studentName + this.totalMarks;
@@ -19,14 +25,14 @@ class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int lines = Integer.parseInt(scan.nextLine());
-		SeparateChainingHashST<Integer, Student> schObj= new SeparateChainingHashST<>();
+		SeparateChainingHashST<Integer, Student> schObj = new SeparateChainingHashST<>();
 		for(int i = 0; i < lines; i++) {
 			String[] tokens = scan.nextLine().split(",");
 			Student stdObj = new Student(tokens[1], Double.parseDouble(tokens[2]));
 			schObj.put(Integer.parseInt(tokens[0]), stdObj);
 		}
-		for(Integer i: schObj.keys()) {
-			System.out.println(i);
-		}
+		// for(Integer i: schObj.keys()) {
+		// 	System.out.println(i);
+		// }
 	}
 }

@@ -19,7 +19,7 @@ class StudentData implements Comparable<StudentData> {
     }
     public int compareTo(final StudentData that) {
         if (this.total > that.total) {
-            return -1;
+            return 1;
         }
         if (this.total < that.total) {
             return -1;

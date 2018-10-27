@@ -48,6 +48,12 @@ class Solution {
 					// System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getName());
 				// } else {
 					// System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getMarks());
+				} else {
+					if (schObj.get(Integer.parseInt(queryTokens[1])) == null) {
+						System.out.println("Student doesn't exists...");
+					} else {
+						System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getMarks());
+					}
 				}
 			}
 		}

@@ -15,11 +15,14 @@ Starting audit...
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:22:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:25:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:25:33: Parameter args should be final. [FinalParameters]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:30:20: 'for' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:30:20: 'for' is not followed by whitespace. [WhitespaceAround]
 [ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:32: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:41:27: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:42:35: 'if' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:43: Line is longer than 80 characters (found 115). [LineLength]
-[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:45: Line is longer than 80 characters (found 116). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:41:27: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:42:35: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:43: Line is longer than 80 characters (found 99). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:44: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:46: Line is longer than 80 characters (found 123). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:48: Line is longer than 80 characters (found 118). [LineLength]
+[ERROR] C:\Users\Siddhartha\Desktop\MSIT\1st year\ADS-1\20186070_ADS-1\ADS-1-Assignment\M24\1\Solution.java:50: Line is longer than 80 characters (found 119). [LineLength]
 Audit done.
-Checkstyle ends with 22 errors.
+Checkstyle ends with 25 errors.

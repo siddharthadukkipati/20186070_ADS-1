@@ -40,9 +40,14 @@ class Solution {
 			String[] queryTokens = scan.nextLine().split(" ");
 			if(queryTokens[0].equals("get")) {
 				if(Integer.parseInt(queryTokens[2]) == 1) {
-					System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getName());
-				} else {
-					System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getMarks());
+					if (schObj.get(Integer.parseInt(queryTokens[1])) == null) {
+						System.out.println("Student doesn't exists...");
+					} else {
+						System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getName());
+					}
+					// System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getName());
+				// } else {
+					// System.out.println(schObj.get(Integer.parseInt(queryTokens[1])).getMarks());
 				}
 			}
 		}

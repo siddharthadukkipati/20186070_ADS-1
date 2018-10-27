@@ -25,7 +25,8 @@ class StudentData implements Comparable<StudentData> {
      * @param      total1      The total 1
      * @param      regnumber1  The regnumber 1
      */
-    StudentData(final String name1, final String total1, final String regnumber1) {
+    StudentData(final String name1,
+        final String total1, final String regnumber1) {
         this.name  = name1;
         this.total = Double.parseDouble(total1);
         this.regNumber = Integer.parseInt(regnumber1);
@@ -80,7 +81,7 @@ class StudentData implements Comparable<StudentData> {
 /**
  * { item_description }.
  */
-public final class Solution {   
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -111,7 +112,8 @@ public final class Solution {
                 double initialMarks = Double.parseDouble(tokens[1]);
                 double finalMarks = Double.parseDouble(tokens[2]);
                 for (StudentData studentData : bstObj.keys()) {
-                    if (studentData.getTotal() >= initialMarks && studentData.getTotal() <= finalMarks) {
+                    if (studentData.getTotal() >= initialMarks
+                        && studentData.getTotal() <= finalMarks) {
                         System.out.println(studentData.getName());
                     }
                 }
@@ -131,7 +133,6 @@ public final class Solution {
                 }
             }
             n--;
-            
         }
     }
 }
